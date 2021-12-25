@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .likeabutton {
+        text-decoration: none; 
+        font: menu;
+        display: inline-block; 
+        padding: 2px 8px;
+        background: ButtonFace; 
+        color: ButtonText;
+        border-style: solid; 
+        border-width: 2px;
+        border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+    }
+    .likeabutton:active {
+        border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
+    }
+    </style>
+</head>
+<body>
+    <h1>랭킹페이지</h1>
+    <div style="text-align: right;">
+    <a class="likeabutton" href="/">홈으로</a>
+    </div>
+    <hr>
+    <div>
+        <h2>다른 회원 랭크 검색</h2>
+    <form id="form" action="/rank/search" method="post">
+        <input type="text" name="nickName" placeholder="검색할 닉네임">
+        <button type=submit>확인</button>
+    </form>
+    </div>
+    <hr>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="4">랭킹표</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td><center>랭킹</center></td>
+                <td><center>닉네임</center></td>
+                <td><center>점수</center></td>
+                <td><center>등급</center></td>
+            </tbody>
+            
+                {% for i in range(0,members.length) %}
+                <tbody>
+                    <td>{{i+1}} </td>
+                    <td>{{members[i].nickName}} </td>
+                    <td>{{members[i].score}}</td>
+                    <td>{{members[i].rank}}</td>
+                </tbody>
+                {% endfor %}
+            
+                <!-- {% for i in range(0, 5) -%}
+                {{ i }},
+              {%- endfor %} -->
+
+
+
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .likeabutton {
+        text-decoration: none; 
+        font: menu;
+        display: inline-block; 
+        padding: 2px 8px;
+        background: ButtonFace; 
+        color: ButtonText;
+        border-style: solid; 
+        border-width: 2px;
+        border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+    }
+    .likeabutton:active {
+        border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
+    }
+    </style>
+</head>
+<body>
+    <h2>고객센터</h2>
+    <div style="text-align: right;">
+        <a class="likeabutton" href="/qna">목록으로</a>
+        </div>
+    <hr>
+    <form action="/qna/inquire" method="post">
+        <label>닉네임  &nbsp &nbsp</label>
+            <input name ="nickName" type="text" value="{{nickName}}" readonly>
+        <br><br>
+        <label>문의 제목  </label>
+            <input name="title" type="text" >
+        <br><br>
+        <label>문의 내용 </label>
+        <br>
+            <input name="content" type="text" style="width:300px;height:200px;font-size:14px;">
+        <br>
+        <button type="submit">문의하기</button>
+    </form>
+</body>
+</html>

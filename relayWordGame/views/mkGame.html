@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .likeabutton {
+        text-decoration: none; 
+        font: menu;
+        display: inline-block; 
+        padding: 2px 8px;
+        background: ButtonFace; 
+        color: ButtonText;
+        border-style: solid; 
+        border-width: 2px;
+        border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+    }
+    .likeabutton:active {
+        border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
+    }
+    </style>
+
+</head>
+<body>
+    <h2>게임방 생성하기</h2>
+<div style="text-align: right;">
+    <a href="/" class="likeabutton"> 홈으로 </a>
+</div>
+    
+
+    <form action="" method="post" id="form">
+        <label>게임방 제목</label>
+        <input type="text" name="title">
+        <button type="submit">게임 생성</button>
+    </form>
+<br>
+
+</body>
+</html>

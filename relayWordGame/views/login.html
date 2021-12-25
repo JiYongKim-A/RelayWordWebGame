@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .likeabutton {
+        text-decoration: none; 
+        font: menu;
+        display: inline-block; 
+        padding: 2px 8px;
+        background: ButtonFace; 
+        color: ButtonText;
+        border-style: solid; 
+        border-width: 2px;
+        border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+    }
+    .likeabutton:active {
+        border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
+    }
+    </style>
+
+</head>
+<body>
+   <h2 style="text-align: center;">Login</h2>
+   <div style="text-align: right;">
+    <a class="likeabutton" href="/">홈으로</a>
+    </div>
+   <br><br>
+    <form action="" method="post" id="form">
+        <label>ID</label>
+        <input type="text" name="id">
+        &nbsp;
+        <label>PW</label>
+        <input type="password" name="pw">
+
+        <button type="submit">로그인</button>
+    </form>
+    <br><br>
+    <a href="/log/signUp" class="likeabutton">회원가입</a>
+</body>
+</html>

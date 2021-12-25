@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- liveserver용 -->
+    <link rel="stylesheet" href="../public/main.css">D
+    <!-- public 용 -->
+    <link rel="stylesheet" href="../main.css">
+    <style>
+        .likeabutton {
+        text-decoration: none; 
+        font: menu;
+        display: inline-block; 
+        padding: 2px 8px;
+        background: ButtonFace; 
+        color: ButtonText;
+        border-style: solid; 
+        border-width: 2px;
+        border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+    }
+    .likeabutton:active {
+        border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
+    }
+    </style>
+</head>
+<body>
+    <label>닉네임</label>
+    <div id=myNickName>{{nickName}}</div>
+
+    <div style="text-align: right;" id="getOut">
+        <!-- <a href="/" class="button"> 홈으로 </a> -->
+    </div>
+
+        <h3 style="text-align: center;">Game</h3>
+
+        <div style="text-align: center;">
+            <input id="suggestion" style="width: 400px; height: 100px; text-align: center; font-size: x-large; color: black;" readonly>
+        </div>
+        <br>
+
+        <div class="startButtonDiv" style="text-align: right;">
+
+        </div>
+
+        <br>
+        <h3 style="text-align: center;">Participant</h3>
+        
+        <!-- 참여자별 채팅한 값 나오는 박스 -->
+        <section id="chatBox" class="row user-grid" style="background-color:brown;">
+<!-- 
+            <input id="member1Chat" readonly>
+            <input id="member2Chat" readonly> 
+            <input id="member3Chat" readonly> -->
+        </section>
+
+        <section class="row user-grid" id="memberGrid">
+            
+            <!-- 추가될 참여자 -->
+
+            <!-- 기본 처음 셋팅 -->
+            <div id="member1" style="width: 200px; height: 200px;"></div>
+
+            <div id="member2" style="width: 200px; height: 200px;"></div>
+
+            <div id="member3" style="width: 200px; height: 200px;"></div>
+
+        
+
+        </section>
+    <br><br><br><br><br>
+
+
+        <div class="sendBox">
+            <!-- 채팅을 위한 채팅박스 -->
+            <span>
+                <!-- 입력 박스 -->
+                <input type="text" class="sendBox-inputBox" id="sendBox"> 
+                &nbsp
+                <!-- 전송 버튼 -->
+                <button class="sendBox-sendButton" id="chatSendButton">전송</button>
+            </span>
+
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <script src="/socket.io/socket.io.js" defer></script> -->
+    <!-- client.js 스크립트 사용 -->
+     <script src='https://cdn.socket.io/3.1.3/socket.io.min.js' ></script> 
+    <script src="/script.js"></script>
+
+</body>
+
+</html>

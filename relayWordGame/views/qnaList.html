@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .likeabutton {
+        text-decoration: none; 
+        font: menu;
+        display: inline-block; 
+        padding: 2px 8px;
+        background: ButtonFace; 
+        color: ButtonText;
+        border-style: solid; 
+        border-width: 2px;
+        border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+    }
+    .likeabutton:active {
+        border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
+    }
+    </style>
+</head>
+<body>
+    <h2>고객센터</h2>
+    <div style="text-align: right;">
+        <a class="likeabutton" href="/myPage">마이페이지로</a>
+    </div>
+    
+    <br>
+    <hr>
+    <h3>Q&A List</h3>
+    <ol>
+        {% if list.length[0] %}
+        문의사항 없음
+        {% else %}
+        {% for i in range(0,list.length) %}
+            <li><a href = "/qna/answer/{{list[i].id}}">{{list[i].nickName}} &ensp; {{list[i].title}}</a></li>
+        {% endfor %}
+        {% endif %}
+        
+    </ol>
+    <br>
+    <a class="likeabutton" href="/qna/inquire">문의하기</a>
+
+</html>
