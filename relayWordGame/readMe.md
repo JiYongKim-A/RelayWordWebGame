@@ -1,6 +1,7 @@
 # Word relay Game (Express, Socket.io, NAVER dictionary API )
 
-[끝말잇기 게임 진행 이미지]
+<img width="1101" alt="screen" src="https://user-images.githubusercontent.com/81874493/147386104-426bb011-9fc5-42e2-81fa-03bab30facfc.png">
+
 
 ## 프로젝트 기능
 1. 회원가입
